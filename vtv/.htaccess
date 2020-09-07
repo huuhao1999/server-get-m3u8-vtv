@@ -1,0 +1,16 @@
+RewriteEngine On
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)/(.*).m3u8$		/vtv/playlist.php?token=$1&idvid=$2 [NC,L]
+RewriteRule ^(.*)/secure.key$ 		/vtv/key.php?token=$1 [NC,L]
+
+<Files *.php>
+	Header set Access-Control-Allow-Origin *
+	Header set Cache-Control no-cache
+</Files>
+
+<Files aa.php>
+	Header set Accept-Ranges bytes
+</Files>
+
