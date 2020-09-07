@@ -1,5 +1,5 @@
 <?php
-error_reporting(0);
+//error_reporting(0);
 define('domain', 'http://localhost');
 
 echo enc_hls();
